@@ -18,3 +18,11 @@ db.connect()
   })
   .catch(err => console.log('db connection error', err.stack))
 
+App.get('/', (req, res) => res.json({
+  message: "Seems to work!",
+}));
+
+App.listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Express seems to be listening on port ${PORT} so that's pretty good 👍`);
+});
